@@ -10,6 +10,8 @@ kind: Pod
 metadata:
   name: nginx-demo1
   namespace: demo1
+  labels:
+    app: nginx
 spec:
   containers:
   - name: nginx
@@ -17,3 +19,18 @@ spec:
     image: nginx:latest
     ports:
     - containerPort: 80
+
+    ---
+    apiVersion: v1
+    kind: Service
+    metadata:
+      name: demo1-service
+      namespace: demo1
+    spec:
+      selector:
+        app: nginx
+      ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 80
+      type: LoadBalancer
