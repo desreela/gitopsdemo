@@ -15,9 +15,7 @@ metadata:
 spec:
   containers:
   - name: nginx
- #   image: nginx:1.14.2
-    image: docker.io/ssdeepu/demo:blue
-    #image: docker.io/ssdeepu/demo:blue
+    image: ssdeepu/demo:blue
     ports:
     - containerPort: 8080
 ---
