@@ -12,6 +12,7 @@ metadata:
   namespace: demo1
   labels:
     app: nginx
+    env: dev
 spec:
   containers:
   - name: nginx
