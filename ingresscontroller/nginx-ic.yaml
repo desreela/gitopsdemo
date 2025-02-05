@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nginx-ingress
+  labels:
+    istio-injection: enabled
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nginx-helmrepo
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  type: oci
+  url: oci://ghcr.io/nginx/charts/nginx-ingress
