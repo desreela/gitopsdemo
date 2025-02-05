@@ -7,7 +7,7 @@ metadata:
     istio-injection: enabled
 ---
 apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: HelmRepository
+kind: OCIRepository
 metadata:
   name: nginx-helmrepo
   namespace: flux-system
@@ -30,7 +30,7 @@ spec:
       chart: nginx-ingress
       version: 2.0.0
       sourceRef:
-        kind: HelmRepository
+        kind: OCIRepository
         name: nginx-helmrepo
       interval: 5m
   targetNamespace: nginx-ingress
@@ -41,5 +41,5 @@ spec:
           service.beta.kubernetes.io/azure-load-balancer-internal: "true"
         httpPort:
           enable: false
-      replicaCount: 3
+      replicaCount: 2
       disableIPV6: true
