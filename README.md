@@ -1,2 +1,0 @@
-# gitopsdemo
-gitopsdemo
