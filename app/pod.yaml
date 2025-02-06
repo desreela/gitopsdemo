@@ -32,7 +32,7 @@ spec:
     kind: Service
     metadata:
       name: demo1-service
-      namespace: demo1
+      namespace: demo1-test
     spec:
       selector:
         app: nginx
