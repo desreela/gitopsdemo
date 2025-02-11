@@ -1,0 +1,8 @@
+namePrefix: dev-
+nameSuffix: "-001"
+commonAnnotations:
+  demoname: TechConnectDemo
+resources:
+- namespace.yaml
+- pod.yaml
+- service.yaml
