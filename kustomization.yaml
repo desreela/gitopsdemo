@@ -1,4 +1,4 @@
-namespace: lab1
+namespace: demo1
 namePrefix: dev-
 nameSuffix: "-001"
 commonAnnotations:
