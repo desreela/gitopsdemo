@@ -1,5 +1,0 @@
-resources:
-- namespace.yaml
-- pod.yaml
-- service.yaml
-- ingresscontroller/nginx-ic.yaml
