@@ -10,9 +10,9 @@ metadata:
   name: falco-helmrepo
   namespace: flux-system
 spec:
-  interval: 5m0s
+  interval: 1m0s
   type: oci
-  url: https://falcosecurity.github.io/charts
+  url: oci://ghcr.io/falcosecurity/charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
