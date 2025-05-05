@@ -22,10 +22,10 @@ metadata:
 spec:
   interval: 5m
   timeout: 10m
-  releaseName: falco-scanner
+  releaseName: falco
   chart:
     spec:
-      chart: nginx-ingress
+      chart: falco
       version: 4.21.3
       sourceRef:
         kind: HelmRepository
